@@ -101,7 +101,7 @@ const About = () => {
             <Card className="border-purple-200 dark:border-purple-700">
               <CardContent className="p-6">
                 <ul className="space-y-4 text-sm">
-                    <li className="flex items-start"><Briefcase className="h-4 w-4 mr-3 mt-1 flex-shrink-0 text-purple-500" /><div><span className="font-semibold text-foreground">Current Role:</span> Backend developer at Ide Pardaz | Website Development Co., Ltd.</div></li>
+                    <li className="flex items-start"><Briefcase className="h-4 w-4 mr-3 mt-1 flex-shrink-0 text-purple-500" /><div><span className="font-semibold text-foreground">Current Role:</span> Backend developer at Parsan Software Solutions</div></li>
                     <li className="flex items-start"><GraduationCap className="h-4 w-4 mr-3 mt-1 flex-shrink-0 text-purple-500" /><div><span className="font-semibold text-foreground">Education:</span> Bachelor of Software Engineering at Kharazmi University of Tehran </div></li>
                     <li className="flex items-start"><Languages className="h-4 w-4 mr-3 mt-1 flex-shrink-0 text-purple-500" /><div><span className="font-semibold text-foreground">Languages:</span> English (Advanced) | Spanish (Beginner) | Persian (Native) </div></li>
                 </ul>
