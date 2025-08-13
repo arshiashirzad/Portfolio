@@ -4,7 +4,7 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import usePageTitle from '../hooks/usePageTitle'
 
-// Floating shapes component
+// Floating shapes
 const FloatingShape = ({ initial, animate, className }) => (
   <motion.div
     initial={initial}
@@ -32,20 +32,18 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center">
-      {/* Hero Section */}
       <section className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 gap-12 items-center">
-
-            {/* Image first on mobile */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ type: 'spring', stiffness: 100, delay: 0.5, duration: 1 }}
-              className="flex justify-center items-center"
-            >
-              <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-[400px] lg:h-[400px] relative">
-                {/* Floating Shapes */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Image first on mobile, second on desktop */}
+            <div className="order-1 lg:order-2 flex justify-center items-center h-full">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', stiffness: 100, delay: 0.5, duration: 1 }}
+                className="w-48 h-48 sm:w-64 sm:h-64 lg:w-[400px] lg:h-[400px] relative"
+              >
                 {shapes.map((shape, index) => (
                   <FloatingShape
                     key={index}
@@ -54,7 +52,6 @@ const Home = () => {
                     className={shape.className}
                   />
                 ))}
-                {/* Profile Image */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
                     src="/profile.jpg"
@@ -62,15 +59,15 @@ const Home = () => {
                     className="w-full h-full object-cover rounded-3xl shadow-2xl shadow-black/20 dark:shadow-black/50 border-2 border-purple-200/20 dark:border-purple-800/20"
                   />
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
-            {/* Text content */}
+            {/* Text content second on mobile, first on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6 text-center"
+              className="order-2 lg:order-1 space-y-6 text-center lg:text-left"
             >
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
                 Hi, I'm <span className="text-purple-500">Arshia Shirzad</span>
@@ -89,11 +86,11 @@ const Home = () => {
                 ))}
               </h2>
 
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
                 Passionate for solving problems with clean codes.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
                 <Link to="/experience">
                   <Button size="lg" className="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20">
                     View Experience
@@ -107,7 +104,7 @@ const Home = () => {
                 </Link>
               </div>
 
-              <div className="flex space-x-4 pt-4 justify-center">
+              <div className="flex space-x-4 pt-4 justify-center lg:justify-start">
                 <a href="https://github.com/arshiashirzad" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full text-muted-foreground bg-secondary hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-600 transition-colors">
                   <Github className="h-5 w-5" />
                 </a>
