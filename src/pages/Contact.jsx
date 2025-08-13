@@ -33,15 +33,15 @@ const Contact = () => {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )
     // Updated email address
-    window.location.href = `mailto:sirzad383@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:arshiashirzad@khu.ac.ir?subject=${subject}&body=${body}`
   }
 
   const contactMethods = [
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "sirzad383@gmail.com",
-      link: "mailto:sirzad383@gmail.com",
+      value: "arshiashirzad@khu.ac.ir",
+      link: "mailto:arshiashirzad@khu.ac.ir",
       description: "Send me an email for professional inquiries"
     },
     {
