@@ -72,19 +72,21 @@ const Experience = () => {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block rounded-full p-3 bg-purple-100 dark:bg-purple-800 mb-4 ring-4 ring-purple-200 dark:ring-purple-700/50">
-            <Building className="h-10 w-10 text-purple-600 dark:text-purple-300" />
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Work Experience</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-            A timeline of my professional roles and key contributions in the field of software engineering.
-          </p>
-        </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-center mb-16"
+>
+  <div className="flex items-center justify-center space-x-3 mb-4">
+    <Building className="h-8 w-8 text-purple-500" />
+    <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Work Experience</h1>
+    <Briefcase className="h-8 w-8 text-purple-400 animate-pulse" />
+  </div>
+  <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+    A timeline of my professional roles and key contributions in the field of software engineering.
+  </p>
+</motion.div>
+
 
         {/* Experience Timeline */}
         <div className="relative pl-6 before:absolute before:top-0 before:left-6 before:h-full before:w-px before:bg-purple-200 dark:before:bg-purple-700/50">

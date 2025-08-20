@@ -35,7 +35,6 @@ const Contact = () => {
     // Updated email address
     window.location.href = `mailto:arshiashirzad@khu.ac.ir?subject=${subject}&body=${body}`
   }
-
   const contactMethods = [
     {
       icon: <Mail className="h-6 w-6" />,
