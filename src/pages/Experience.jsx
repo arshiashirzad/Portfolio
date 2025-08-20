@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Calendar, Building, Code, Database, Brain, Award } from 'lucide-react'
+import { Calendar, Building, Code, Database, Brain, Award, Briefcase } from 'lucide-react'
 import usePageTitle from '../hooks/usePageTitle'
 
 const Experience = () => {
