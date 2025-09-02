@@ -1,26 +1,13 @@
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Calendar, Building, Code, Database, Brain, Award, Briefcase } from 'lucide-react'
+import { Calendar, Building, Code, Database, Brain, Award, Briefcase, Globe } from 'lucide-react'
 import usePageTitle from '../hooks/usePageTitle'
 
 const Experience = () => {
   usePageTitle('Experience', 'Professional experience and career journey of Arshia Shirzad in backend development and AI.')
 
   const experiences = [
-    {
-      id: 1,
-      company: "Parsan Software Solutions",
-      position: "Backend Developer",
-      duration: "August 2025 - Present",
-      status: "Current Position",
-      technologies: ["C#", ".NET", "Enterprise Solutions", "SQL Server", "Architecture Patterns"],
-      highlights: [
-        "Contributing to the development of large-scale enterprise software.",
-        "Applying modern backend architecture patterns to ensure system scalability and performance.",
-        "Collaborating within a cross-functional team to deliver high-quality, impactful software."
-      ]
-    },
     {
       id: 2,
       company: "Ide Pardaz | Website Development Co., Ltd.",
@@ -72,21 +59,47 @@ const Experience = () => {
         
         {/* Header */}
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="text-center mb-16"
->
-  <div className="flex items-center justify-center space-x-3 mb-4">
-    <Building className="h-8 w-8 text-purple-500" />
-    <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Work Experience</h1>
-    <Briefcase className="h-8 w-8 text-purple-400 animate-pulse" />
-  </div>
-  <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-    A timeline of my professional roles and key contributions in the field of software engineering.
-  </p>
-</motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <Building className="h-8 w-8 text-purple-500" />
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Work Experience</h1>
+            <Briefcase className="h-8 w-8 text-purple-400 animate-pulse" />
+          </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            A timeline of my professional roles and key contributions in the field of software engineering.
+          </p>
+        </motion.div>
 
+        {/* Remote Passion Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-12"
+        >
+          <Card className="border-purple-200 dark:border-purple-700 shadow-md">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-purple-600 dark:text-purple-400">
+                <Globe className="h-5 w-5" /> Open for Remote Opportunities
+              </CardTitle>
+            </CardHeader>
+          <CardContent>
+  <p className="text-muted-foreground">
+    I’m excited to take on <span className="font-semibold text-purple-700 dark:text-purple-400">remote opportunities </span> 
+    both inside Iran and internationally.  
+    Since I’m also continuing my university studies, working remotely gives me the chance to grow my 
+    <span className="font-semibold text-purple-700 dark:text-purple-400"> professional experience </span> 
+    while staying flexible.  
+    I’d love to collaborate with teams where I can learn, contribute, and build meaningful projects together. 🚀
+  </p>
+</CardContent>
+
+          </Card>
+        </motion.div>
 
         {/* Experience Timeline */}
         <div className="relative pl-6 before:absolute before:top-0 before:left-6 before:h-full before:w-px before:bg-purple-200 dark:before:bg-purple-700/50">
